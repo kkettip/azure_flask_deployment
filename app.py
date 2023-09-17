@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 import pandas as pd
-import random
+
 
 app = Flask(__name__)
 
@@ -12,12 +12,7 @@ def index():
 def about():
     return render_template('about.html')
 
-@app.route('/randomnumber')
-def randomnumber():
-    num_var = random.randint(1, 100000)
-    return render_template('randomnumber.html', single_num = num_var)   
-
-df = pd.read_csv('https://raw.githubusercontent.com/hantswilliams/HHA_504_2023/main/WK1/data/113243405_StonyBrookSouthamptonHospital_StandardCharges.csv')
+df = pd.read_json('https://data.cms.gov/data-api/v1/dataset/939226be-b107-476e-8777-f199a840138a/data')
 @app.route('/data')
 def data(data=df):
     data = data.sample(15)
