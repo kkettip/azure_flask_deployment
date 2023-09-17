@@ -20,6 +20,6 @@
 
 ##### 9. Once the website is deployed, a url to access the website will be provided.
 
-##### 10. The following is the websites' url for the Telehealth Usage Trends' website.
+##### 10. The following is the website's url for the Telehealth Usage Trends' website.
 
 **<https://kettip-hha504.azurewebsites.net/>**
